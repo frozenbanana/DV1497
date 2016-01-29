@@ -1,0 +1,26 @@
+4 olika sätt att allokera minne för objekt
+
+1, static array of abjoects
+
+  Friend Friends[size]; // allt finns på stacken
+
+du behöver inte deallocera minne
+
+2, dynamic array of objects // pointers finns på stacken, array med objects på heapen
+
+  Friend *friends = new Friend[size];
+
+deallocerar: delete [] friends;
+
+3, static array of pointers to objects // array med pointers = stack, varje object = heapen
+
+  Friend *friends[size];
+
+deallocerar: for-loop delete friends[i]
+
+4, Dynamic array of pointers to objects // pointer till array = stack, pointers i array och objecten de pekar till = heap
+
+  Friend **friends = new Friend* [size];
+
+deallocerar: steg 1: for-loop delete friends[i]
+             steg 2: delete [] friends;

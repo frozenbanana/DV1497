@@ -1,0 +1,31 @@
+1.  svar: 12,5
+1.  Se uppgift1_2.cpp
+3.
+
+float weight;
+int age;
+string civilnumber = ;
+int carCount;
+bool found;
+
+4. ledtext sträng output från programmet för att vägleda en användare
+
+5. Ja
+
+6. Nej
+
+7. variabler ska ha mestadels småbokstäver men med storbokstav för att
+påvisa nytt ord. T.ex: int carCount; Konstanter ska ha stora bokstäver.
+
+8. 
+
+
+11. if, else, for , while
+
+12a) inget semicolon
+  b) likhetsoperator istället för tilldelningsoperator
+  c) inmellanslag i variabelnamn.
+
+13.
+
+
