@@ -14,17 +14,17 @@ FriendBook::~FriendBook(){
     delete this->friends[i];
 	}
 }
-FriendBook::FriendBookFour(){
+void FriendBook::FriendBookFour(){
   this->capacity = 20;
   this->nrOfFriends = 0;
-  this->friends4 = new Friends friends*[capacity];
+  this->friends4 = new *friends[capacity];
   for (int i = 0; i < capacity; i++) {
     this->friends4[i] = NULL;
   }
 }
 
-FriendBook::~FriendBookFour(){
-  for (i = 0; i < nrOfFriends; i++) {
+void FriendBook::FriendBookFourDe(){
+  for (int i = 0; i < nrOfFriends; i++) {
     delete friends[i];
  }
   delete [] friends;

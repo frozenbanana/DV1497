@@ -10,8 +10,9 @@ public:
 	FriendBook();
 	~FriendBook();
 
-	FriendBookFour();
-	~FriendBookFour();
+	void FriendBookFour();
+	void FriendBookFourDe();
+
 	bool addFriend(string name, string dateOfBirth, string adress, string email, string phoneNumber);
   void setName(string name);
 	bool existFriend() const;
