@@ -24,3 +24,6 @@ deallocerar: for-loop delete friends[i]
 
 deallocerar: steg 1: for-loop delete friends[i]
              steg 2: delete [] friends;
+
+is - a relation betyder inheritage (ärver) måste finnas
+has - a relation betyder composition/aggregation har tillgång till

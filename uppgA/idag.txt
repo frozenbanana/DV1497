@@ -1,0 +1,2 @@
+iphone, 20, 500
+samsung, 20, 550
