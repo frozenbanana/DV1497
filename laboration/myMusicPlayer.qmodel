@@ -175,8 +175,8 @@
                          </base-DElement>
                          <object>{86499523-3c21-45af-aab5-9cddf650db0a}</object>
                          <name>TrackList</name>
-                         <pos>x:-90;y:275</pos>
-                         <rect>x:-75;y:-105;w:150;h:210</rect>
+                         <pos>x:-90;y:280</pos>
+                         <rect>x:-95;y:-115;w:190;h:230</rect>
                          <visual-role>0</visual-role>
                         </DObject>
                        </base-DObject>
@@ -200,47 +200,6 @@
                         </DRelation>
                        </base-DRelation>
                       </DInheritance>
-                     </instance>
-                    </item>
-                    <item>
-                     <instance type="DAssociation">
-                      <DAssociation>
-                       <base-DRelation>
-                        <DRelation>
-                         <base-DElement>
-                          <DElement>
-                           <uid>{6c69dbcb-56da-413e-9d98-22b9113eea41}</uid>
-                          </DElement>
-                         </base-DElement>
-                         <object>{7f51b2e6-42e4-4676-8e13-25bca5638415}</object>
-                         <a>{a0d2e743-7b95-49b3-aa44-7a54f512c9cf}</a>
-                         <b>{398926b9-634d-4280-a8bd-07f6aa529cdc}</b>
-                        </DRelation>
-                       </base-DRelation>
-                       <a>
-                        <DAssociationEnd>
-                         <navigable>true</navigable>
-                        </DAssociationEnd>
-                       </a>
-                      </DAssociation>
-                     </instance>
-                    </item>
-                    <item>
-                     <instance type="DDependency">
-                      <DDependency>
-                       <base-DRelation>
-                        <DRelation>
-                         <base-DElement>
-                          <DElement>
-                           <uid>{051d9853-e8f3-464f-b3ad-a42ad306c307}</uid>
-                          </DElement>
-                         </base-DElement>
-                         <object>{7c83f726-3e91-4c19-b24f-31a38872c71d}</object>
-                         <a>{a0d2e743-7b95-49b3-aa44-7a54f512c9cf}</a>
-                         <b>{398926b9-634d-4280-a8bd-07f6aa529cdc}</b>
-                        </DRelation>
-                       </base-DRelation>
-                      </DDependency>
                      </instance>
                     </item>
                     <item>
@@ -305,9 +264,45 @@
                       </DAssociation>
                      </instance>
                     </item>
+                    <item>
+                     <instance type="DInheritance">
+                      <DInheritance>
+                       <base-DRelation>
+                        <DRelation>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{aea17c9d-611c-414c-a8fc-ce7dec4e0207}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{2ba3eaaa-eefa-4cb5-9229-35894936f6e1}</object>
+                         <a>{a0d2e743-7b95-49b3-aa44-7a54f512c9cf}</a>
+                         <b>{398926b9-634d-4280-a8bd-07f6aa529cdc}</b>
+                        </DRelation>
+                       </base-DRelation>
+                      </DInheritance>
+                     </instance>
+                    </item>
+                    <item>
+                     <instance type="DInheritance">
+                      <DInheritance>
+                       <base-DRelation>
+                        <DRelation>
+                         <base-DElement>
+                          <DElement>
+                           <uid>{42549455-584c-4214-9401-0879566d7005}</uid>
+                          </DElement>
+                         </base-DElement>
+                         <object>{da62a143-37de-45de-bc04-df421353ef35}</object>
+                         <a>{acfc39cb-5093-4326-b62f-3345e2d4ceac}</a>
+                         <b>{9fbee79b-82ac-4740-84af-da955e7a22ba}</b>
+                        </DRelation>
+                       </base-DRelation>
+                      </DInheritance>
+                     </instance>
+                    </item>
                    </qlist>
                   </elements>
-                  <last-modified>1455391807624</last-modified>
+                  <last-modified>1455450001041</last-modified>
                  </MDiagram>
                 </base-MDiagram>
                </MCanvasDiagram>
@@ -360,6 +355,28 @@
                         </target>
                        </handle>
                       </item>
+                      <item>
+                       <handle>
+                        <uid>{da62a143-37de-45de-bc04-df421353ef35}</uid>
+                        <target>
+                         <instance type="MInheritance">
+                          <MInheritance>
+                           <base-MRelation>
+                            <MRelation>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{da62a143-37de-45de-bc04-df421353ef35}</uid>
+                              </MElement>
+                             </base-MElement>
+                             <a>{9cfafb70-a291-463e-890f-15d20c243e2d}</a>
+                             <b>{44449f25-d459-40fa-a30b-f46d03785975}</b>
+                            </MRelation>
+                           </base-MRelation>
+                          </MInheritance>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
                      </qlist>
                     </handles>
                    </handles>
@@ -370,70 +387,70 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{95f472ee-0a36-4e02-afb6-48f23ee814c5}</uid>
+                    <uid>{86f25e29-c374-4426-ac46-29583bd312dd}</uid>
                     <type>1</type>
                     <declaration>int userId</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{d9544721-86a3-43e7-a87e-a95f9f4d6eb7}</uid>
+                    <uid>{ef7b905a-9b72-454c-9f9d-519d3475654b}</uid>
                     <type>1</type>
                     <declaration>string userName</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{cf4cb2a9-023b-464a-bd4f-97ca382445f2}</uid>
+                    <uid>{aeda39eb-1e7c-4783-b64b-c36a22333670}</uid>
                     <type>1</type>
                     <declaration>string passwd</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{816d4391-dcce-493d-8c7a-f548452bbb98}</uid>
+                    <uid>{b4ffd75f-7d5b-4f71-88ae-460d8f526492}</uid>
                     <type>1</type>
                     <declaration>*Tracklist tracklists</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{8319dcb7-5553-4bef-a617-6802b8aafb66}</uid>
+                    <uid>{fb5875b5-8efe-461c-8f07-4c9ceb2db26f}</uid>
                     <type>2</type>
                     <declaration>void setUserId(int id)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{4ebafccd-2bde-468f-9b28-044a71e134cb}</uid>
+                    <uid>{7467b1b7-f519-4926-a5ee-af80bb46b5a4}</uid>
                     <type>2</type>
                     <declaration>void setUserName(string name)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{a14c7f5c-a3d7-4ebf-87b5-1e746ee40ed4}</uid>
+                    <uid>{ec04a408-ad35-4ffa-8eeb-22c162aaeb54}</uid>
                     <type>2</type>
                     <declaration>void setPasswd(string passwd)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{ffd8d2c3-c33f-4820-8c03-0c7351b3b78b}</uid>
+                    <uid>{22314684-e01f-4079-b1c4-c525f0999f48}</uid>
                     <type>2</type>
                     <declaration>int getUserId()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{586504b2-ea0d-4792-8f95-6e95329acf06}</uid>
+                    <uid>{3d77d4bb-107a-4a30-bc7b-e1b6e7b643ed}</uid>
                     <type>2</type>
                     <declaration>string getUserName()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{0cc56bd4-224e-45a3-a3cb-92665710cf7b}</uid>
+                    <uid>{82ab0b4d-c9b3-46f4-9901-c258bd7ad9db}</uid>
                     <type>2</type>
                     <declaration>string  getPasswd()</declaration>
                    </MClassMember>
@@ -758,65 +775,65 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{ea2f47ca-beb5-4cff-a270-15011cfec115}</uid>
+                    <uid>{df0ff1de-0b7e-478c-81e0-0f0114a2e58c}</uid>
                     <type>1</type>
                     <declaration>*User users</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{c2bf35fb-ebc7-4928-9443-db6052f2e8a3}</uid>
+                    <uid>{b9285c1b-7417-4aee-8269-559e68108144}</uid>
                     <type>1</type>
                     <declaration>int numberOfUsers</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{dea35810-e81c-4855-b94b-b1f3d22cea1f}</uid>
+                    <uid>{a098e8a9-bf12-419f-9da1-25bb76281f70}</uid>
                     <type>1</type>
                     <declaration>string filePath</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{5e3bf190-1500-4a14-ab71-3e8743d2aec0}</uid>
+                    <uid>{14a8ee8d-7cd2-4eec-9526-7be277b6d9e0}</uid>
                     <type>2</type>
                     <declaration>int readInUsers(string filePath)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{8fa2234c-afcf-4dbb-ad46-78ce1a6b077f}</uid>
+                    <uid>{277c1198-a51f-4adf-b1f8-63247468d4f5}</uid>
                     <type>2</type>
                     <declaration>bool saveDatabase()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{81a07d4f-9372-4333-b9db-af0f33be23f2}</uid>
+                    <uid>{f8427fed-7f30-4f1a-8c17-12ec8eeec493}</uid>
                     <type>2</type>
                     <declaration>login(string userName, string passwd)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{9ccce019-1a57-4228-9ae8-eb39ac1978b5}</uid>
+                    <uid>{da35ada4-aa78-44b9-8ee6-b3e5ad200609}</uid>
                     <type>2</type>
-                    <declaration>searchUser(string userName)</declaration>
+                    <declaration>int searchUser(string userName)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{21ada35b-d410-425a-a7ab-dd60116ffda5}</uid>
+                    <uid>{3243430b-c02c-402c-b92d-c7e0e59946aa}</uid>
                     <type>2</type>
                     <declaration>int addUser(string userName, string passwd)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{5827b6bc-1e03-499b-8255-c33ff0b1e52c}</uid>
+                    <uid>{8d33789e-341a-47f6-b23c-19aabd21eedd}</uid>
                     <type>2</type>
-                    <declaration>bool removeUser(string userName)</declaration>
+                    <declaration>bool removeUser(int userIndex)</declaration>
                    </MClassMember>
                   </item>
                  </qlist>
@@ -876,79 +893,86 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{e84c498d-43fd-46e9-9176-f37a2a223733}</uid>
+                    <uid>{c81f8a11-cad7-45eb-bc17-aff042417144}</uid>
                     <type>1</type>
                     <declaration>string title</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{84ef8e73-62ad-444d-9a51-e213198926cb}</uid>
+                    <uid>{cf77575e-907f-44b7-8b0e-e2bf26f9d523}</uid>
                     <type>1</type>
                     <declaration>*Track tracks</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{179be9ae-b386-4874-9a7f-3846aa9ae684}</uid>
+                    <uid>{e22f0fa0-5956-45ef-a8ce-60b85bb5a6b8}</uid>
                     <type>1</type>
                     <declaration>int TotDuration</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{01848d1e-5755-4620-8ccd-185e8c54c31e}</uid>
+                    <uid>{7403fb57-2a6a-41eb-a787-3a4d7cb2979a}</uid>
                     <type>1</type>
                     <declaration>string filepath</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{47231c7c-8910-4865-94a7-8ee8ae7041f9}</uid>
+                    <uid>{a98393ac-ce69-47fc-a7a4-437afa306011}</uid>
                     <type>2</type>
                     <declaration>string getTitle()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{a8546f7f-4a40-4854-9661-0e78e320a090}</uid>
+                    <uid>{6110bffc-c873-48f0-8bd6-84218cb88aad}</uid>
                     <type>2</type>
                     <declaration>int getTotDuration()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{14be693b-5074-41c4-9fdc-187d60b53a0a}</uid>
+                    <uid>{f5560762-abf3-42a8-9033-08d9eedb5545}</uid>
                     <type>2</type>
                     <declaration>string setTitle(string title)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{e966e636-b43d-4a8e-8d17-49fad8ca1613}</uid>
+                    <uid>{04dd67b4-d694-4a50-ba82-e5eb8b8767f9}</uid>
                     <type>2</type>
                     <declaration>void getTitle()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{3d8b6c93-7d4b-4abf-9d2b-93e5196b0fc6}</uid>
+                    <uid>{f4a503ad-d6cb-409d-aa9f-c6252d04876b}</uid>
                     <type>2</type>
-                    <declaration>int addTrack()</declaration>
+                    <declaration>int addTrack(Track aTrack)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{54d890fa-bb3a-4c9b-824b-83b06332bf6e}</uid>
+                    <uid>{264c2d0f-296c-45e0-b52c-290dee680081}</uid>
                     <type>2</type>
                     <declaration>bool removeTrack()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{b5f1a758-8282-44f3-90b7-9ae3b3c417bd}</uid>
+                    <uid>{7b208124-6f18-4cbb-a8af-0079bb8c6b3f}</uid>
                     <type>2</type>
-                    <declaration>bool saveTracklist()</declaration>
+                    <declaration>bool readTracklist(string filePath)</declaration>
+                   </MClassMember>
+                  </item>
+                  <item>
+                   <MClassMember>
+                    <uid>{1f38886f-5877-4570-805c-5adfaf7b0452}</uid>
+                    <type>2</type>
+                    <declaration>bool saveTracklist(Track aTrack)</declaration>
                    </MClassMember>
                   </item>
                  </qlist>
@@ -1025,6 +1049,28 @@
                         </target>
                        </handle>
                       </item>
+                      <item>
+                       <handle>
+                        <uid>{2ba3eaaa-eefa-4cb5-9229-35894936f6e1}</uid>
+                        <target>
+                         <instance type="MInheritance">
+                          <MInheritance>
+                           <base-MRelation>
+                            <MRelation>
+                             <base-MElement>
+                              <MElement>
+                               <uid>{2ba3eaaa-eefa-4cb5-9229-35894936f6e1}</uid>
+                              </MElement>
+                             </base-MElement>
+                             <a>{192dddb6-fb63-4a57-ae2e-f319ed5529d4}</a>
+                             <b>{86499523-3c21-45af-aab5-9cddf650db0a}</b>
+                            </MRelation>
+                           </base-MRelation>
+                          </MInheritance>
+                         </instance>
+                        </target>
+                       </handle>
+                      </item>
                      </qlist>
                     </handles>
                    </handles>
@@ -1035,112 +1081,112 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{23b97cd3-8c6b-4765-adec-5ef1bb12011c}</uid>
+                    <uid>{cf73bdda-b4cb-42e3-87f7-3e2849c126bc}</uid>
                     <type>1</type>
                     <declaration>string title</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{548f7c8c-0514-4574-b5b8-a69876b49f64}</uid>
+                    <uid>{253db342-67ed-4336-92c0-8a779839f674}</uid>
                     <type>1</type>
                     <declaration>string artist</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{91cc083b-a1b1-48b5-94d3-e94c55f6a53a}</uid>
+                    <uid>{bffed00d-bb0c-4203-a07f-d44341f3df26}</uid>
                     <type>1</type>
                     <declaration>string genre</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{55430baf-842a-40d7-8b6d-7fd24c0bf66f}</uid>
+                    <uid>{2ce44338-92bb-40ff-995f-6930402574d9}</uid>
                     <type>1</type>
                     <declaration>Emotion trackEmotion</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{5b219348-e7e1-4c5c-8427-cf20575b1fee}</uid>
+                    <uid>{9487fe53-165d-42b0-8a24-d95d8004c907}</uid>
                     <type>1</type>
                     <declaration>string filePath</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{b35ce088-818f-42b0-b756-aeb11b87819f}</uid>
+                    <uid>{176bb291-a889-46ef-819a-5e04d88892aa}</uid>
                     <type>1</type>
                     <declaration>int duration</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{6135e702-226f-4011-b33e-8df1fb6367e9}</uid>
+                    <uid>{f2562dea-b284-459a-aec0-c9a6f768c445}</uid>
                     <type>2</type>
                     <declaration>void setTitle(string title)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{e9050645-dcd2-443b-8416-0fa62825f8fd}</uid>
+                    <uid>{f7b74311-e641-4ae7-9359-4f39916ee7f3}</uid>
                     <type>2</type>
                     <declaration>void setArtist(string artist)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{4ff7b8f2-3587-4fd2-aea1-ae8de51b2568}</uid>
+                    <uid>{37aad2d1-6d2a-4fa0-804f-fa87b8b85cdd}</uid>
                     <type>2</type>
                     <declaration>void setGenre(string genre)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{298f0762-166f-49f2-98e3-a8329addbc9a}</uid>
+                    <uid>{34948e29-87ee-4a13-8e0e-884b9056ebee}</uid>
                     <type>2</type>
                     <declaration>void setfilePath(string filePath)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{32b2c75e-d194-4640-a6f1-4d3e92e8c9ca}</uid>
+                    <uid>{7da720db-c206-4deb-ab18-11186a6fdad3}</uid>
                     <type>2</type>
                     <declaration>void setDuration(int duration)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{e2335dbe-c2cb-4537-9e2f-08b2f98ee2df}</uid>
+                    <uid>{a9320a27-f971-47fb-b391-276fdb08e796}</uid>
                     <type>2</type>
                     <declaration>string setTitle()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{12cf9b01-6a7f-474b-ae8b-10374df213c3}</uid>
+                    <uid>{cf6dfcaf-437f-4258-bcf0-bea876597669}</uid>
                     <type>2</type>
                     <declaration>string setArtist()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{24a18ddc-7cf4-4157-b765-2327601d0ce6}</uid>
+                    <uid>{21bb3b74-b63b-4e2b-ad4a-776acb7cd7f1}</uid>
                     <type>2</type>
                     <declaration>string setGenre()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{569234d0-c388-4ee5-b1e8-432267191c0e}</uid>
+                    <uid>{6bd42d02-f558-4dc1-a5c9-279c4ddaae86}</uid>
                     <type>2</type>
                     <declaration>string setfilePath()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{45fd0a51-0872-4b34-89c7-288cf39cf2b0}</uid>
+                    <uid>{3c3bb010-0df0-4730-8dc9-1a39a0e82fb4}</uid>
                     <type>2</type>
                     <declaration>int getDuration()</declaration>
                    </MClassMember>
