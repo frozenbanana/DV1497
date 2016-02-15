@@ -71,7 +71,7 @@
                          <object>{6b3c4a1e-7ca0-4ca1-af49-620e73748821}</object>
                          <name>MusicPlayer</name>
                          <pos>x:-560;y:280</pos>
-                         <rect>x:-120;y:-90;w:240;h:180</rect>
+                         <rect>x:-120;y:-95;w:240;h:190</rect>
                          <visual-role>0</visual-role>
                         </DObject>
                        </base-DObject>
@@ -465,65 +465,72 @@
                  <qlist>
                   <item>
                    <MClassMember>
-                    <uid>{91b00df5-59f7-4ded-8221-ab0c2f2e3fb1}</uid>
+                    <uid>{9461b5ea-c028-48f6-98cb-c2025a35a9b8}</uid>
                     <type>2</type>
                     <declaration>playTracks(trackList tracklist, int trackIndex)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{bf2ea374-5fe8-4273-b230-38bc13cea476}</uid>
+                    <uid>{2905c3d2-1bb6-4656-bfbf-55396933323b}</uid>
                     <type>2</type>
                     <declaration>playSingleTrack(Track aTrack)</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{5b80a326-0314-4845-bc90-77b878778779}</uid>
+                    <uid>{75721007-30ae-4ece-ba04-97e095b89aa1}</uid>
                     <type>2</type>
                     <declaration>pause()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{9255ab3c-b315-4c58-a946-ae96d1b1bbed}</uid>
+                    <uid>{9d8cc90a-9e52-421e-8174-d7fdea088003}</uid>
                     <type>2</type>
                     <declaration>stop()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{c8431dd1-704b-4008-8994-a2531c8fccfa}</uid>
+                    <uid>{da12e903-17a9-4928-a2a7-c80d8697bafc}</uid>
                     <type>2</type>
                     <declaration>getTrackListInfo()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{e0a9c6bd-fd79-43cb-b229-ec7bda060680}</uid>
+                    <uid>{1329cb27-c9aa-40ab-81b7-dea2c9681b70}</uid>
                     <type>2</type>
                     <declaration>getTrackInfo()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{b93d4abd-97bb-4601-a587-9c81017b861c}</uid>
+                    <uid>{72c10de1-4bb8-4317-85bf-764656610a97}</uid>
                     <type>2</type>
                     <declaration>getTrackDuration()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{490cde38-37a1-457a-a4c0-c1f5d1f4aa63}</uid>
+                    <uid>{7cda269c-a89c-49d2-a719-94cb57424d97}</uid>
                     <type>2</type>
                     <declaration>getTrackCurrentDuration()</declaration>
                    </MClassMember>
                   </item>
                   <item>
                    <MClassMember>
-                    <uid>{8a6a9798-1f06-416d-8032-741243c1bd02}</uid>
+                    <uid>{e702a4dd-9e26-4416-be1d-037e0fc07c72}</uid>
                     <type>2</type>
                     <declaration>bool checkLogin(string UserName)</declaration>
+                   </MClassMember>
+                  </item>
+                  <item>
+                   <MClassMember>
+                    <uid>{567a4f44-2b26-49b2-8fa5-8dd8857e8a82}</uid>
+                    <type>2</type>
+                    <declaration>bool searchTrack(string trackName)</declaration>
                    </MClassMember>
                   </item>
                  </qlist>
