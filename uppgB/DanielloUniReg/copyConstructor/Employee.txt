@@ -1,0 +1,23 @@
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
+#include <string>
+using namespace std;
+
+class Employee{
+private:
+	int salary;
+	string department;
+public:
+	Employee(string department, int salary, string mail, string name);
+	virtual ~Employee();
+	Employee();
+	int getSalary()const;
+	string getDepartment()const;
+	void setSalary(int salary);
+	void setDepartment(string department);
+	string toStringSpecific()const;
+	Employee* clone()const;
+
+};
+
+#endif;

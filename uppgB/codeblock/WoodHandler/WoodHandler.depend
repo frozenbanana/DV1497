@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1456073451 source:/home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/Joist.cpp
+	<iostream>
+	<sstream>
+	<string>
+	"Joist.h"
+	"Wood.h"
+
+1456074132 /home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/Joist.h
+	"Wood.h"
+	<iostream>
+	<string>
+
+1456001485 /home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/Wood.h
+	<iostream>
+	<sstream>
+	<string>
+
+1456244526 source:/home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/main.cpp
+	"WoodHandler.h"
+	"Panel.h"
+	"Joist.h"
+	<iostream>
+	<string>
+
+1456055075 /home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/WoodHandler.h
+	"Wood.h"
+
+1456086408 source:/home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/Panel.cpp
+	<iostream>
+	<sstream>
+	<string>
+	"Panel.h"
+	"Wood.h"
+
+1456002214 /home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/Panel.h
+	"Wood.h"
+
+1456061535 source:/home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/Wood.cpp
+	"Wood.h"
+	<iostream>
+	<sstream>
+	<string>
+
+1456243645 source:/home/irb/Programming/DV1497/uppgB/codeblock/WoodHandler/WoodHandler.cpp
+	"WoodHandler.h"
+	"Panel.h"
+	"Joist.h"
+	<typeinfo>
+	<iostream>
+	<sstream>
+	<string>
+

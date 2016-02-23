@@ -1,0 +1,51 @@
+#include "Person.h"
+#include <string>
+using namespace std;
+
+Person::Person(string name, string mail)
+{
+	this->name = name;
+	this->mail = mail;
+}
+Person::~Person()
+{
+
+	//cout << "destructor i klassen Person anropas nu" << endl;
+}
+Person::Person()
+{
+	this->name = "Unknown";
+	this->mail = "Unknown";
+
+}
+string Person::get_name()const
+{
+	return this->name;
+}
+string Person::get_mail()const
+{
+	return this->mail;
+}
+void Person::set_name(string name)
+{
+	this->name = name;
+}
+void Person::set_mail(string mail)
+{
+	this->name = name;
+}
+void Person::toString()const
+{
+	return "Name: " + this->name + "Mail: " + this->mail + ""toStringSpecific(); //tostringspecific gör att alla andra klasser har sin egen version av toString
+}
+Person::Person(const Person& origObj)
+{
+	this->name = origObj.name;
+	this->mail = origObj.mail;
+
+}
+void Person::operator=(const Person& origObj)
+{
+	this->name = origObj.name;
+	this->mail = origObj.mail;
+}

@@ -1,0 +1,207 @@
+#include <string>
+#include "UniversityReg.h"
+
+using namespace std;
+
+UniversityReg::UniversityReg( int capacity)
+{
+	this->capacity = capacity;
+	this->nrOfPersons = nrOfPersons;
+	this->persons = new Person*[this->capacity];
+	this->initiate();
+
+}
+void UniversityReg :: initiate(int from)
+{
+	for (int i = from; i < this->capacity; i++)
+	{
+		this->persons[i] = nullptr;
+	}
+}
+UniversityReg:: ~UniversityReg()
+{
+	for (int i = 0; i < nrOfPersons; i++)
+	{
+		delete this->persons[i];
+	}
+	delete[] this->persons;
+}
+
+void UniversityReg::addStudent(string name, string mail, int regNr)const
+{
+	if (this->capacity == this->nrOfPersons)
+	{
+
+	}
+	this->persons[this->nrOfPersons++] = new Student(name, mail, regNr);
+}
+void UniversityReg::addEmployee(string name, string mail, int salart, string department)
+{
+	if (this->capacity == this->nrOfPersons)
+	{
+
+	}
+	this->persons[this->nrOfPersons++] = new Employee(name, mail, salary, department);
+}
+void University::operator(const UniversityReg& origObj)
+{
+
+}
+void UniversityReg::expand()
+{
+	this->capacity += 10;
+	Person** temp = new Person*[this->capacity];
+	for (int i = 0; i < nrOfPersons; i++)
+	{
+		temp[i] = persons[i]; //bara pekarna kopieras
+	}
+	delete[] this->persons;
+	this->persons =temp; 
+	this->initiate(this->nrOfPersons);
+}
+int UniversityReg::getNrOfStudents()const
+{
+	Student* studPtr = nullptr;
+	int nrOf = 0;
+	for (int i = 0; i < this->nrOfPersons; i++)
+	{
+		studPtr = dynamic_cast<Student *> (this->persons[i]);
+		if (studPtr != nullptr)
+		{
+			nrOf++;
+		}
+	}
+	return nrOf;
+}
+int UniversityReg::getNrOfEmployees()const
+{
+	Employee* empPtr = nullptr;
+	int nrOf = 0;
+	for (int i = 0; i < nrOf; i++)
+	{
+		empPtr = dynamic_cast <Employee*> (this->persons[i]);
+		if (empPtr !=nullptr )
+		{
+			nrOf++; 
+		}
+	}
+	return nrOf; 
+}
+int UniversityReg::getNrOfPersons()const
+{
+	int nrOf = 0;
+	Person* persPtr = nullptr;
+	for (int i = 0; i < nrOf; i++)
+	{
+		persPtr = dynamic_cast<Person*>(this->persons[i]);
+		if (persPtr != nullptr)
+		{
+			nrOf++;
+		}
+	}
+	return nrOf;
+}
+void UniversityReg::getAsStrings(string arr[], string what)
+{
+	if (what == "Studenter")
+	{
+		Student* studPtr = nullptr;
+		int counter = 0;
+		for (int i = 0; i < nrOfPersons; i++)
+		{
+			studPtr = dynamic_cast<Student*>(this->persons[i]);
+			if (studPtr != nullptr)
+			{
+				arr[counter++] = this->persons[i]->toString(); /
+			}
+		}
+	}
+	else{
+		if (what == "Anställda")
+		{
+
+		}
+	}
+	else{
+		if (what == "Alla")
+		{
+			for (int i = 0; i < nrOfPersons; i++)
+			{
+				arr[i] = this->persons[i]->toString();
+			}
+		}
+	}
+}
+UniversityReg::UniversityReg(const UniversityReg& origObj)
+{
+	Student* studPtr = nullptr;
+	Employee* empPtr = nullptr;
+
+
+	this->capacity = origObj.capacity;
+	this->nrOfPersons = origObj.nrOfPersons;
+	this->persons = new Person*[origObj.capacity];
+	for (int i = 0; i < origObj.nrOfPersons; i++)
+	{
+		this->persons[i] = origObj.persons[i]->clone();
+	}
+
+	//for (int i = 0; i < origObj.nrOfPersons; i++)
+	//{
+	//	studPtr = dynamic_cast<Student*>(this->persons[i]);
+	//	if (studPtr != nullptr)
+	//	{
+	//		this->persons[i] = new Student(*studPtr);
+	//	}
+
+	//	else
+	//	{
+	//		empPtr = dynamic_cast<Employee*>(this->persons[i]);
+	//		if (empPtr != nullptr)
+	//		{
+	//			this->persons[i] = new Employee(*empPtr); 
+	//		}
+
+	//	}
+	//}
+	//this->initiate(this->nrOfPersons);
+}
+void UniversityReg::operator=(const UniversityReg& origObj)
+{
+	if (this != &origObj)
+	{
+		for (int i = 0; i < nrOfPersons; i++)
+		{
+			delete this->persons[i];
+		}
+		delete[] this->persons;
+
+		Student* studPtr = nullptr;
+		Employee* empPtr = nullptr;
+
+
+		this->capacity = origObj.capacity;
+		this->nrOfPersons = origObj.nrOfPersons;
+		this->persons = new Person*[origObj.capacity];
+
+		for (int i = 0; i < origObj.nrOfPersons; i++)
+		{
+			studPtr = dynamic_cast<Student*>(this->persons[i]);
+			if (studPtr != nullptr)
+			{
+				this->persons[i] = new Student(*studPtr);
+			}
+
+			else
+			{
+				empPtr = dynamic_cast<Employee*>(this->persons[i]);
+				if (empPtr != nullptr)
+				{
+					this->persons[i] = new Employee(*empPtr);
+				}
+
+			}
+		}
+		this->initiate(this->nrOfPersons);
+	}
+}

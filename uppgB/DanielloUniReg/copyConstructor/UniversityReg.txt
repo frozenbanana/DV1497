@@ -1,0 +1,33 @@
+#ifndef UNIVERSITYREG_H
+#define UNIVERSITYREG_H
+
+#include "Student.h"
+#include "Employee.h"
+#include "Person.h"
+
+class UniversityReg{
+private:
+	Person** persons;
+	int capacity;
+	int nrOfPersons;
+	void initiate(int from = 0); 
+	void expand();
+public:
+	UniversityReg(int capacit = 3);
+	virtual ~UniversityReg();
+	UniversityReg(const UniversityReg& origObj); // copy constructor
+	void operator= (const UniversityReg& origObj);
+	void addStudent(string name, string mail, int regNr);
+	void addEmployee(string name, string mail, int salary, string department); //eller bara add och parametrar
+	
+	
+	int getNrOfStudents()const;
+	int getNrOfEmployees()const;
+	int getNrOfPersons()const;
+	void getAsStrings(string arr[], string what)const; 
+	//remove(...), Find(...), save(...), open()
+
+};
+
+
+#endif

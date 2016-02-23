@@ -1,0 +1,33 @@
+#ifndef PERSON_H
+#define PERSON_H
+#include <string>
+using namespace std;
+
+class Person{
+private:
+	string name;
+	string mail;
+public:
+	Person(string name, string mail);
+	Person();
+	Person(const Person& origObj); //copy constructor
+	void operator= (const Person& origObj);
+
+	virtual ~Person();
+	string get_name()const;
+	string get_mail()const;
+	void set_name(string name);
+	void set_mail(string mail);
+	 string toString()const;
+	 //rent virtuell funktion (pure virtual)
+	 virtual string toStringSpecific() const=0;
+	 //när en klass innhåller minst en
+	 //rent virtuell funktion blir klassen abstakt
+	 // vi kan inte skapa några objekt från en abstrakt klass
+	 //detta innebär att vi måste använda
+	 //en array innehållande Person-pekare ->
+	 //vi kan inte använda en array innehållande Person-objekt
+	 virtual Person* clone()const = 0;
+};
+
+#endif

@@ -1,0 +1,48 @@
+#include "Employee.h"
+#include "Person.h"
+#include <string>
+#include <sstream>
+using namespace std;
+
+Employee::Employee(int salary, string department, string name, string mail)
+:Person(name, mail)
+{
+	this->salary = salary;
+	this->department = department;
+}
+Employee::Employee()
+: Person()
+{
+	this->salary = 0;
+	this->department = "Unknown";
+}
+Employee:: ~Employee()
+{
+
+}
+int Employee::getSalary()const
+{
+	return this->salary;
+}
+string Employee::getDepartment()const
+{
+	return this->department
+}
+void Employee::setSalary(int salary)
+{
+	this->salary = salary;
+}
+void Employee::setDepartment(string department)
+{
+	this->department = department;
+}
+string Employee::toStringSpecific()const
+{
+	stringstream converter;
+		converter << "salary:" << this->salary << "department: " << this->department << endl;
+		return converter.str();
+}
+Employee* Emloyee::clone()const
+{
+	return new Employee(*this);
+}

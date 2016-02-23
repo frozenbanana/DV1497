@@ -1,0 +1,44 @@
+﻿Build started 2016-02-16 16:38:12.
+     1>Project "\\storage10.student.bth.se\profile\hebc15\Desktop\Inledande prog C\person\person\person.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt UniversityReg.cpp main.cpp
+         main.cpp
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\employee.h(5): error C2059: syntax error : 'namespace'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\employee.h(5): error C2238: unexpected token(s) preceding ';'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\main.cpp(28): fatal error C1075: end of file found before the left brace '{' at '\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\student.h(7)' was matched
+         UniversityReg.cpp
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\employee.h(5): error C2059: syntax error : 'namespace'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\employee.h(5): error C2238: unexpected token(s) preceding ';'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(9): error C2059: syntax error : 'namespace'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(9): error C2238: unexpected token(s) preceding ';'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(10): error C3254: 'Student' : class contains explicit override 'addStudent' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(10): error C2838: 'addStudent' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(18): error C3254: 'Student' : class contains explicit override 'addEmployee' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(18): error C2838: 'addEmployee' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(27): error C3254: 'Student' : class contains explicit override 'removeStudent' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(27): error C2838: 'removeStudent' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(40): error C3254: 'Student' : class contains explicit override 'removeEmployee' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(40): error C2838: 'removeEmployee' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(55): error C3254: 'Student' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(55): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(60): error C3254: 'Student' : class contains explicit override '{ctor}' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(60): error C2838: '{ctor}' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(61): error C3254: 'Student' : class contains explicit override '{dtor}' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(61): error C2838: '{dtor}' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(61): error C2535: 'Student::~Student(void)' : member function already defined or declared
+                 \\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\student.h(24) : see declaration of 'Student::~Student'
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(67): error C3254: 'Student' : class contains explicit override 'getNrOfPersons' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(67): error C2838: 'getNrOfPersons' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(68): error C3254: 'Student' : class contains explicit override 'getNrOfEmployees' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(68): error C2838: 'getNrOfEmployees' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(79): error C3254: 'Student' : class contains explicit override 'getNrOfStudents' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(79): error C2838: 'getNrOfStudents' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(90): error C3254: 'Student' : class contains explicit override 'printAllPersons' but does not derive from an interface that contains the function declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(90): error C2838: 'printAllPersons' : illegal qualified name in member declaration
+     1>\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\universityreg.cpp(108): fatal error C1075: end of file found before the left brace '{' at '\\storage10.student.bth.se\profile\hebc15\desktop\inledande prog c\person\person\student.h(7)' was matched
+         Generating Code...
+     1>Done Building Project "\\storage10.student.bth.se\profile\hebc15\Desktop\Inledande prog C\person\person\person.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.30
