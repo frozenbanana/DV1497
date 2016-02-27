@@ -16,8 +16,10 @@ class Vector{
 				Vector(int capacity, int capacityIncrement);
 				~Vector();
 				Vector(const Vector<T> &orig);
-				Vector& operator=(const Vector<T> &orig){
+				Vector& operator=(const Vector<T> &orig);
+				Vector& operator+(const Vector<T> &orig);
 				Vector addAt(int index, T item) throw(...);
+                                Vector clear();
 };
 
 template <typename T>
@@ -63,10 +65,23 @@ Vector<T>&Vector<T>::operator=(const Vector<T> &orig){
 				this->capacityIncrement = orig.capacity;
 				this->nrOfItems = orig.nrOfItems;
 		}
-		for(int i = 0; i < this->nrOfItems; i++){
+		for(int i = 0; i < this->nrOfItems; i++){ // detta är fel
 			this->items = new T[this-capacity];
 		}
-		return *this;	
+	return *this;	
+}
+template <typename T>
+Vector <T>&Vector::operator+(const Vector<T> &orig){
+		int oldNrOfItems = this->nrOfItems;
+		int j = 0;
+		if(&orig != nullptr){
+				this->capacity += orig.capacity;
+				this->nrOfItems += orig.capacity;
+		}
+		for(int i = oldNrOfItems; i < this->nrOfItems; i++){
+				items[i] = orig.items[j++];
+		}
+	return *this; 
 }
 template <typename T>
 void Vector<T>::expand(){
@@ -88,4 +103,10 @@ void Vector<T>::addAt(int index, T item) throw(...){
 			this->items[index] = item; // and then put the item on index
 		}
 }
-
+template <typname T>
+void Vector <T>::clear(){
+                delete [] this->items;
+                this->capacity = 10;
+		this->nrOfitems = 0;
+		this->items = new T[this->capacity];
+}

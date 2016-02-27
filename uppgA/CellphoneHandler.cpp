@@ -1,4 +1,5 @@
 #include "CellphoneHandler.h"
+#include <sstream>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -40,7 +41,7 @@ CellphoneHandler::CellphoneHandler(CellphoneHandler const& orig){// cpy
 void CellphoneHandler::setHandlerName(string name){
    this->name = name;
 }
-string CellphoneHandler::getHandlerName(){
+string CellphoneHandler::getHandlerName() const{
   return this->name;
 }
 void CellphoneHandler::addPhone(string name, int stock, int price){
@@ -64,7 +65,7 @@ bool CellphoneHandler::removePhone(string name){
 }
 
 void CellphoneHandler::expand(){
-    this->capacity += this->capacity/2;
+    this->capacity += this->capacity/2 +1;
     Cellphone **temps = new Cellphone*[this->capacity]; //Ny array med större storlek
     for(int i = 0;i < this->amountPhones; i++){
         temps[i] = this->cellphones[i];     //Ny array pekars på gamla objekt
@@ -72,7 +73,7 @@ void CellphoneHandler::expand(){
     delete [] this->cellphones;               //gammal array försvinner
     this->cellphones = temps;           // orginalpekare pekas om till ny array
 }
-int CellphoneHandler::exists(string name){
+int CellphoneHandler::exists(string name) const{
     int ret = -1;
     for(int i = 0; i < this->amountPhones && ret == -1; i++){ // medans det finns objekt i arrayen och ingen har hittats
       if(this->cellphones[i]->getModelName() == name){
@@ -82,7 +83,8 @@ int CellphoneHandler::exists(string name){
   return ret;
 }
 
-void CellphoneHandler::changePrice(int priceLimit, double discount){
+string CellphoneHandler::changePrice(int priceLimit, double discount){
+  stringstream ss;
   int origPrice;
   int newPrice;
   double disc;
@@ -92,22 +94,25 @@ void CellphoneHandler::changePrice(int priceLimit, double discount){
       disc =  (double) 1 -(discount/100);          // räknar ut rabattfaktor
       newPrice = origPrice * disc;                 // sparar nya pricet
       this->cellphones[i]->setPrice(newPrice);     // byta till det nya priset
-      cout << "New price for " << cellphones[i]->getModelName() << ": "
+      ss << "New price for " << cellphones[i]->getModelName() << ": "
         << cellphones[i]->getPrice() << endl;
     }
   }
+ return ss.str();
 }
 bool CellphoneHandler::writeToFile(string fileName){ //användaren ska ge namn på fil
     bool flag = false;
     ofstream phoneFile;
     phoneFile.open(fileName.c_str());
     if(phoneFile.is_open()){
- //     phoneFile << this->amountPhones << endl;// onödig pga readFromFile använder while loop
-      for(int i = 0; i < this->amountPhones; i++){
-        phoneFile << this->cellphones[i]->getModelName();
-        phoneFile << ", " << this->cellphones[i]->getStock();
-        phoneFile << ", " << this->cellphones[i]->getPrice() << endl;
-      }
+	phoneFile << this->name << endl;
+	phoneFile << this->amountPhones << endl;
+	phoneFile << this->capacity << endl;	      
+	for(int i = 0; i < this->amountPhones; i++){
+        	phoneFile << this->cellphones[i]->getModelName() << endl;
+        	phoneFile << this->cellphones[i]->getStock() << endl;
+        	phoneFile << this->cellphones[i]->getPrice() << endl;
+        }
       flag = true;
       phoneFile.close();
     }
@@ -115,26 +120,41 @@ bool CellphoneHandler::writeToFile(string fileName){ //användaren ska ge namn p
 }
 bool CellphoneHandler::readFromFile(string fileName){
     bool flag = false;
-    string tempStr;
-    string fileData = "";
+    string name, modelName;
+    string amountPhones, capacity, stock, price;
+    stringstream fileData;
     ifstream phoneFile;
     phoneFile.open(fileName.c_str());
     if(phoneFile.is_open()){
-      flag = true;
-      while(getline(phoneFile,tempStr)){
-          fileData += tempStr;
-          fileData += "\n";
-      }
-      cout << fileData << endl;
-      phoneFile.close();
-    }
-    else{
-      cout << "ERROR: File could not be opened." << endl;
+         flag = true;
+	 getline(phoneFile, name);			    // första tre raderna i filen har objektsmedlemmarna 
+	 getline(phoneFile, amountPhones);
+	 getline(phoneFile, capacity);
+	 //cout << name << amountPhones << capacity << endl;
+	 this->name = name;				    // ger objektet nya värden
+	 this->amountPhones = atoi(amountPhones.c_str());
+	 this->capacity = atoi(capacity.c_str());
+	 //cout << this->name << this->amountPhones << this->capacity << endl;		 
+	this->cellphones = new Cellphone*[this->capacity]; // skapar ny array of cellphones
+	 for(int i = 0; i < this->amountPhones; i++){	    // fyller dem med resten av filen				
+		getline(phoneFile, modelName);
+		getline(phoneFile, stock);
+		getline(phoneFile, price);
+		cout << "Inne i forloop" << modelName << stock << price << endl;	
+		this->cellphones[i]->setModelName(modelName);	// felet är här <-----------------------
+		cout << "äR dett ok" << endl;
+		int intStock = atoi(stock.c_str());
+		this->cellphones[i]->setStock(intStock);
+	        int intPrice = atoi(price.c_str());
+		this->cellphones[i]->setPrice(intPrice);
+		cout << cellphones[i]->toString() << endl;
+         }
+         phoneFile.close();
     }
     return flag;
 }
 
-string CellphoneHandler::getPhonesToString(){
+string CellphoneHandler::getPhonesToString() const{
     string line = "";
     for(int i = 0; i < this->amountPhones; i++){
       line += this->cellphones[i]->toString();
